@@ -1,10 +1,15 @@
 import adapter from "@sveltejs/adapter-static";
 
-export default {
+const config = {
   kit: {
     adapter: adapter({
-      strict: false,
       fallback: "index.html",
+      strict: false,
     }),
+    paths: {
+      base: "/m324-agenda-app",
+    },
   },
 };
+
+export default config;
